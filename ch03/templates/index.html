@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭 수 전송</title>
+    <script src="{{ url_for('static', filename='index.js') }}" defer></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        main {
+            padding-top: 80px;
+        }
+
+        h1 {
+            font-size: 42px;
+        }
+
+        #count {
+            margin: 40px 0;
+            font-size: 100px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 18px 30px;
+            border: 0;
+            border-radius: 10px;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            cursor: wait;
+            opacity: 0.6;
+        }
+
+        #increaseButton {
+            background-color: #1677f2;
+        }
+
+        #sendButton {
+            background-color: #23955f;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>클릭 시 숫자 증가</h1>
+        <div id="count">0</div>
+        <button id="increaseButton" type="button">수 증가</button>
+        <button id="sendButton" type="button">전송</button>
+    </main>
+</body>
+</html>
