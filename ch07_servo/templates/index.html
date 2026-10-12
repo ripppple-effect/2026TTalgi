@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servo Motor Control</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-weight: normal;
+        }
+
+        .control {
+            display: flex;
+            align-items: center;
+            max-width: 780px;
+        }
+
+        label {
+            margin-right: 12px;
+            font-size: 18px;
+            white-space: nowrap;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 13px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #198754;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #157347;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Servo Motor Control</h1>
+
+    <div class="control">
+        <label for="angle">Enter Angle (0-180):</label>
+
+        <input
+            type="number"
+            id="angle"
+            name="angle"
+            min="0"
+            max="180"
+            placeholder="0 - 180"
+        >
+
+        <button type="button" id="setAngle">Set Angle</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
